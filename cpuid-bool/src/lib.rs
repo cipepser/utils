@@ -102,7 +102,8 @@ macro_rules! new {
             /// initialization token.
             #[inline]
             pub fn init() -> InitToken {
-                init_get().0
+                InitToken(())
+                // init_get().0
             }
 
             /// Initialize underlying storage if needed and get
